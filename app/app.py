@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from symsound import create_app, db
+from mystic_music import create_app, db
 import sys
 
 dotENVFile = os.path.join(os.path.dirname(__file__), ".env")
