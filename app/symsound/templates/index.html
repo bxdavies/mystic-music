@@ -1,0 +1,17 @@
+
+{% extends "layout.html" %}
+
+
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<div class="center-container">
+    <h1> Welcome to Mystic Music </h1>
+    <h2> Mystic Music is a Spotify App to gather your friends music</h2>
+    <p> To get started click or tap Get Started. </p>
+   
+    <a class="button" href="{{ url_for('main.getStarted') }}"> Get Started</a>  
+</div>
+
+{% endblock %}

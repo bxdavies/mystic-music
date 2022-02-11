@@ -1,0 +1,25 @@
+{
+    "spellright.language": [
+        "en_GB"
+    ],
+    "spellright.documentTypes": [
+        "python",
+        "html",
+        "css",
+        "markdown",
+        "plaintext"
+    ],
+    "spellright.ignoreFiles": [
+        "**/.gitignore",
+        "**/.spellignore",
+        "**/.settings.json",
+        ".env"
+    ],
+    "spellright.ignoreRegExpsByClass": {
+        "python": ["/\"(.+?)\"/gm"],
+        "html": ["/%(.+?)%/gm"]
+    },
+    "files.exclude": {
+        "**/__pycache__": true
+    }
+}

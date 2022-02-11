@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mystic Music - {% block title %}{% endblock %} </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/picnic.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/simpleNotification.css') }}">
+    {% block head %} {% endblock %}
+</head>
+<body>
+
+    <!-- Nav and Content Container -->
+    <div class="container">
+           
+        <!-- Navigation Bar -->
+        <nav>
+
+            <!-- Logo -->
+            <a class="brand" href="">
+                <img class="logo" src="{{ url_for('static', filename='img/logo-c.png') }}" width="100px;" >
+            </a> 
+        
+            <!-- Center Nav -->
+            <div class="menu-center menu">
+               <h1> Mystic Music </h1>
+            </div>
+            
+            <!-- Right Nav -->
+            <div class="menu-right menu">
+                
+            </div>
+
+        </nav>
+
+        <!-- Content -->
+        <main>
+
+            {% block content %}
+                
+            {% endblock %}
+    
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Released under <a href="https://github.com/bxdavies/lmrun/blob/main/LICENSE"> GNU General Public License v3.0 </a> on <a href="https://github.com/bxdavies/lmrun/">GitHub</a>
+        <br>
+        Developed by <a href="https://bxdavies.co.uk"> @bxdavies</a> 
+    </footer>
+
+
+   
+    <script src="{{ url_for('static', filename='js/simpleNotification.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/notification.js') }}"></script>
+    {% for category, message in get_flashed_messages(with_categories=True) %}
+    <script>
+        category = '{{ category }}';
+        message = '{{ message }}';
+        console.log(category, message)
+        notification(category, message);
+    </script>
+    {% endfor %}
+
+</body>
+</html>

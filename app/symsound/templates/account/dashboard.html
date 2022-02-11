@@ -1,0 +1,60 @@
+
+{% extends "layout.html" %}
+
+{% block title %} Get Started {% endblock %}
+
+{% block content %}
+<div class="center-container">
+    <h1> Account Dashboard </h1>
+    <h2> Welcome {{ displayName }}</h2>
+
+    <div class="flex two">
+        <div>
+            <article class="card">
+                <header>
+                    <h2> Sync Spotify with Mystic Music</h2>
+                </header>
+                <footer>
+                    <a class="button" href="{{ url_for('account.sync') }}"> Sync </a>
+                </footer>
+            </article>
+        </div>
+        <div>
+            <article class="card">
+                <header>
+                    <h2> Activate Mystic Music </h2>
+                </header>
+                <footer>
+                    <a class="button" href="{{ url_for('account.sync') }}"> Activate </a>
+                </footer>
+            </article>
+        </div>
+  </div>
+
+  <div class="flex two">
+        <div>
+            <article class="card">
+                <header>
+                    <h2> Log Out </h2>
+                </header>
+                <footer>
+                    <a class="button" href="{{ url_for('account.logOut') }}"> Log Out </a>
+                </footer>
+            </article>
+        </div>
+        <div>
+            <article class="card">
+                <header>
+                    <h2> Delete Mystic Music Account </h2>
+                </header>
+                <footer>
+                    <a class="button" href="{{ url_for('account.delete') }}"> Delete </a> 
+                </footer>
+            </article>
+        </div>
+  </div>
+      
+      
+</div>
+
+{% endblock %}

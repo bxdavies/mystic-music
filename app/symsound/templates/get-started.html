@@ -1,0 +1,16 @@
+
+{% extends "layout.html" %}
+
+{% block title %} Get Started {% endblock %}
+
+{% block content %}
+<div class="center-container">
+    <h1> Get Started </h1>
+    <p> Please click the sign in button to allow Mystic Music to access your Spotify account.</p>
+     
+    <a href="{{ url_for('account.login') }}"> <button>  Login with Spotify </button> </a>
+     
+    <p> By clicking the sign in button you agree to our privacy policy. </p>
+</div>
+
+{% endblock %}
