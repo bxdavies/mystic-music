@@ -4,7 +4,7 @@ from mystic_music import create_app, db
 import sys
 
 dotENVFile = os.path.join(os.path.dirname(__file__), ".env")
-spotiPYCacheFolder = './.spotify-cache/'
+spotiPYCacheFolder = "./.spotify-cache/"
 
 # Check if ENV file exists
 if os.path.exists(dotENVFile):
